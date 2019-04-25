@@ -1,0 +1,47 @@
+
+<h1>Taches</h1>
+<hr>
+<button  type="button" style="background-color :gray"ng-click="back()"><</button>
+
+<form ng-submit="addtask()">
+  <div class="form-group">
+    <label for="name">Nom de la tache</label>
+    <input ng-model="newTache" type="text" class="form-control add-todo" id="newTache" placeholder="Enter le nom de la tache">
+  </div>
+  <button type="submit" class="btn btn-success">Nouvelle tache</button>
+</form>
+  <hr>
+
+
+  <ul id="sortable" class="list-unstyled"l ng-repeat=" task in tasks">
+    <li >
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <input type="checkbox"ng-model="task.done" id="task.done" ng-change="updateTask(task._id)"> 
+                
+              </div>
+            </div>
+            <input type="text" class="form-control" placeholder={{task.name}} ng-style="task.done ? {'text-decoration': 'line-through', 'color': 'rgb(0,0,0,.5)'} : {}"
+            />
+            <button  type="button" class="btn btn-danger btn-sm" ng-click="deleteTask(task._id)">x</button>
+      
+          </div>
+    <hr>
+    </li>
+
+
+  </ul>
+
+
+
+
+
+  
+ 
+  
+  
+
+
+
+     

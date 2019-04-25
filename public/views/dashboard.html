@@ -1,0 +1,37 @@
+<h1>Dashboard</h1>
+<form ng-submit="addList()">
+  <div class="form-group">
+    <label for="name">Nom de la liste</label>
+    <input ng-model="newListName" type="text" class="form-control" id="name" placeholder="Enter le nom de la liste">
+  </div>
+  <button type="submit" class="btn btn-primary">Nouvelle liste</button>
+</form>
+
+ 
+    <hr>
+
+
+    <ul id="sortable" class="list-unstyled"l ng-repeat=" list in lists">
+      <li >
+          <div class="input-group mb-3">
+              <button  type="button" class="btn btn-primary btn-sm" ng-click="showtask(list._id)">Add tasks</button>
+
+              
+              <input type="text" class="form-control" placeholder={{list.name}} 
+              />
+              <button  type="button" class="btn btn-danger btn-sm" ng-click="deleteList(list._id)">x</button>
+        
+            </div>
+      <hr>
+      </li>
+  
+  </ul>
+
+
+ 
+
+  
+
+
+
+     
