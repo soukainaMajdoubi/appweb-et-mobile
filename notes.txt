@@ -1,0 +1,38 @@
+API REST
+- Resources:
+  Task
+  List
+  User
+
+List: GET /resources
+Add: POST /resources
+Get:  GET /resources/:id
+Edit: PUT /resources/:id
+Remove: DELETE /resources/:id
+
+File Structure
+app/
+  public/
+  database/
+    tasks.js
+    lists.js
+    users.js
+    index.js
+  routes/
+    tasks.js
+    lists.js
+    users.js
+    index.js
+  app.js
+  package.json
+
+tasks
+  listId
+  name
+  done
+lists
+  userId
+  name
+users
+  username
+  password
